@@ -1,7 +1,15 @@
 function sum(a) {
-    var sum = a[0];
-    for(var i = 0; i < a.length; i++) {
+    if (a.length == 0){  //base case
+        return 0;
+    }
+    else if (a.length == 1){ //base case + 1
+        return a[0];
+    }
+    else{
+        var sum = a[0];
+        for(var i = 1; i < a.length; i++) {
         sum += a[i];
+        }
     }
     return sum;
 }
